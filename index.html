@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to the World of Nature</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="#top" data-nav="home">Home</a></li>
+        <li><a href="#about" data-nav="about">About</a></li>
+        <li><a href="#gallery" data-nav="services">Services</a></li>
+        <li><a href="#contact" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top" class="container">
+    <h1 class="page-title">Welcome to the World of Nature</h1>
+
+    <img class="hero-image" src="waterfall.jpg"
+         alt="A lush green forest waterfall flowing over moss-covered rocks into a clear pool"
+         width="1150" height="383">
+
+    <section id="gallery" class="gallery" aria-label="Nature gallery">
+      <img src="lavender.jpg" loading="lazy" width="640" height="360"
+           alt="Rows of purple lavender in a field at sunset">
+      <img src="sunset.jpg" loading="lazy" width="640" height="360"
+           alt="Golden sunset over the sea with tall grass in the foreground">
+      <img src="mountain-lake.jpg" loading="lazy" width="640" height="360"
+           alt="Turquoise alpine lake surrounded by pine trees and mountains">
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+      <h2 id="about-title">About Us</h2>
+      <p>Welcome to our demo website. We aim to create an exceptional experience for our users, offering a range of services designed to meet your needs. Explore our site to learn more about what we offer.</p>
+      <div class="buttons">
+        <button type="button" class="btn" id="get-started">Get Started</button>
+        <button type="button" class="btn" id="learn-more">Learn More</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-note">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close contact form">&times;</button>
+      <h2 id="modal-title">Contact Us</h2>
+      <p id="modal-note" class="note">This is a demonstration form. Your message is not sent or stored anywhere.</p>
+
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error">
+          <span class="error" id="name-error" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error">
+          <span class="error" id="email-error" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" aria-describedby="message-error"></textarea>
+          <span class="error" id="message-error" role="alert"></span>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <p class="success" id="success" role="status" tabindex="-1" hidden>
+        Thank you! This is a demo, so your message was not sent or saved.
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
